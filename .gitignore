@@ -1,0 +1,28 @@
+# =============== #
+# Unity Generated #
+# =============== #
+[Ll]ibrary/
+[Tt]emp/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Pp]ackages/com.unity.package-manager/
+UserSettings/
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Visual Studio / JetBrains Rider
+.vs/
+*.csproj
+*.sln
+*.user
+*.unityproj
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db

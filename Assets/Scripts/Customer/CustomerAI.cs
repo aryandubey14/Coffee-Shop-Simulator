@@ -7,10 +7,11 @@ public class CustomerAI : MonoBehaviour
     public static CustomerAI Instance;
     public Transform Target; // table or counter
     public Transform Exit;
+    public Transform SpawnPoint;
 
     private NavMeshAgent agent;
     private Animator anim;
-    private bool hasArrived = false; 
+    private bool hasArrived = false;
 
     void Awake() { Instance = this; }
 
@@ -78,8 +79,9 @@ public class CustomerAI : MonoBehaviour
 
             // Wait until agent reaches exit
             yield return new WaitUntil(() => !agent.pathPending && agent.remainingDistance <= agent.stoppingDistance);
-
-            // Destroy customer when reached
+            
+            hasArrived = false;
+            Instantiate(gameObject, SpawnPoint.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

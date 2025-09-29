@@ -27,8 +27,6 @@ public class CoffeeDelivery : MonoBehaviour
 
     private void DeliverCoffee()
     {
-        Debug.Log("Coffee Delivered!");
-
         // Reset coffee state
         hasCoffee = false;
         MakingCoffee.Instance.CoffeeCup.SetActive(false);
